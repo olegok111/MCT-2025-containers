@@ -1,0 +1,6 @@
+HOST = "0.0.0.0"
+DATABASE_USER = "11cloud2"
+DATABASE_NAME = "11cloud2"
+DATABASE_PORT = 5432
+DATABASE_PASSWORD_FILE = "/run/secrets/db_password"
+TABLE_NAME = "visits"
