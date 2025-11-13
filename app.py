@@ -5,13 +5,7 @@ from config import*
 
 app = Flask(__name__)
 dbconn = psycopg.Connection.connect(
-    {
-        'host': HOST,
-        'port': DATABASE_PORT,
-        'dbname': DATABASE_NAME,
-        'user': DATABASE_USER,
-        'passfile': DATABASE_PASSWORD_FILE
-    }
+        f'host={DATABASE_HOST} port={DATABASE_PORT} dbname={DATABASE_NAME} user={DATABASE_USER} password={DATABASE_PASSWORD}'
 )
 cur = dbconn.cursor()
 
