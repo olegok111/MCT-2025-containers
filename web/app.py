@@ -28,6 +28,11 @@ def visits():
     return str(visit_cnt)
 
 
+@app.route("/")
+def index():
+    return "SUPER GOOD"
+
+
 def close_db_connection():
     dbconn.close()
 
