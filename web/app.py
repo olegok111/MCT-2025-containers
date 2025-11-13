@@ -23,7 +23,8 @@ def ping():
 
 @app.route("/visits")
 def visits():
-    visit_cnt = cur.execute(f"SELECT COUNT(*) FROM {TABLE_NAME};").fetchone()
+    query_res = cur.execute(f"SELECT COUNT(*) FROM {TABLE_NAME};").fetchone()
+    visit_cnt = query_res[0]
     return str(visit_cnt)
 
 

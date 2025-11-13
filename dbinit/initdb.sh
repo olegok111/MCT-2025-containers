@@ -12,7 +12,7 @@ psql <<-EOSQL
 EOSQL
 psql -U $POSTGRES_USER -d $POSTGRES_DB <<-EOSQL
 	CREATE TABLE IF NOT EXISTS visits (
-		id integer PRIMARY KEY,
+		id SERIAL PRIMARY KEY,
 		data text
 	);
 EOSQL
