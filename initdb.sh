@@ -3,7 +3,7 @@ mkdir /run/postgresql
 chown postgres:postgres /run/postgresql
 su -c "
 rm -rf $PGDATA/*
-pg_ctl init
+pg_ctl init -o \"-c listen_addresses='*'\"
 pg_ctl start
 psql <<-EOSQL
 	CREATE USER \"11cloud2\" PASSWORD '$POSTGRES_PASSWORD';

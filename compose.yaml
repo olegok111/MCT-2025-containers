@@ -15,6 +15,9 @@ services:
       POSTGRES_PASSWORD: zeroZEROzeroZERO
     volumes:
       - db_data:/var/lib/postgresql/data
+      - type: bind
+        source: ./pg_hba.conf
+        target: /var/lib/postgresql/data/pg_hba.conf
     expose:
       - 5432
     healthcheck:
