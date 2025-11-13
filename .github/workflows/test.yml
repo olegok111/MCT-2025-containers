@@ -26,7 +26,7 @@ jobs:
             fi
             sleep 1
           done
-          if [[ $(docker compose ps -a --format '{{.ExitCode}}' dbinit) ]]; do
+          if [[ $(docker compose ps -a --format '{{.ExitCode}}' dbinit) ]]; then
             echo "DB initialized successfully!"
           else
             echo "Failed to initialize the DB"
